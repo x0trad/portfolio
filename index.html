@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Adib Harith (Adhar) — designer and builder in Kuala Lumpur. Rakan AI, Sayajual, Hermes, SFX Forge and more.">
+<title>Adib Harith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Layout: Swiss poster sheet. Left rail with section numbers, hairline rules, colour-block panels, cut-out collage. One deliberate light "paper" look. */
+:root{
+  --paper:#f2efe8; --ink:#111110; --red:#f2401c; --blue:#1f4bff; --yellow:#e9ff3b; --rule:#c9c4b8; --muted:#5e5a52;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1320px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;line-height:1.5}
+.sec{border-top:1px solid var(--ink);position:relative;display:grid;grid-template-columns:44px 1fr;gap:0}
+.rail{border-right:1px solid var(--rule);padding-top:14px}
+.rail span{font-family:var(--mono);font-size:11px}
+.inner{min-width:0;padding-block:28px 40px;padding-left:24px}
+.plus{position:absolute;font-family:var(--mono);font-size:16px;color:var(--muted);line-height:1;user-select:none}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--ink)}
+nav .wrap{display:grid;grid-template-columns:auto 1fr auto auto;align-items:stretch;min-height:56px}
+.brand{display:flex;align-items:center;gap:14px;padding-right:20px;border-right:1px solid var(--rule)}
+.brand b{font-family:var(--body);font-weight:800;font-size:19px;letter-spacing:-.01em;white-space:nowrap}
+.links{display:flex;justify-content:center;align-items:center;gap:28px;font-size:14px}
+.links a{text-decoration:none;border-bottom:1px solid var(--ink)}
+.clock{display:flex;align-items:center;padding:0 20px;border-left:1px solid var(--rule);border-right:1px solid var(--rule);font-variant-numeric:tabular-nums}
+.cta{display:flex;align-items:center;padding-left:20px;font-weight:500;text-decoration:none;white-space:nowrap}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:start}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(76px,13vw,184px);line-height:.98;letter-spacing:.015em;margin:6px 0 0;text-transform:uppercase}
+h1 .r{color:var(--red)}
+.lede{max-width:34ch;font-size:18px;margin:28px 0 18px}
+.meta{display:grid;gap:2px;margin-bottom:18px}
+.under{font-weight:500;text-decoration:none;border-bottom:1px solid var(--ink)}
+.collage{position:relative;min-height:540px}
+.blk-blue{position:absolute;top:0;left:8%;right:10%;height:440px;background:var(--blue);overflow:hidden}
+.blk-blue .mono{position:absolute;top:12px;left:14px;color:#fff}
+.mono-big{position:absolute;right:-6%;bottom:-14%;font-family:var(--display);font-size:clamp(220px,26vw,380px);line-height:.8;color:var(--red);letter-spacing:-.04em}
+.blk-yellow{position:absolute;top:40px;right:0;width:9%;height:380px;background:var(--yellow)}
+.chat{position:absolute;left:-2%;bottom:6px;width:min(300px,62%);background:#fff;border:3px solid #fff;box-shadow:0 0 0 1px var(--ink);transform:rotate(-4deg);font-size:13px}
+.chat .hd{background:var(--ink);color:#fff;padding:8px 10px;display:flex;justify-content:space-between}
+.chat .b{padding:10px;display:grid;gap:8px}
+.bub{padding:8px 10px;max-width:86%;line-height:1.35}
+.bub.me{justify-self:end;background:var(--yellow)}
+.bub.ai{background:#ece9e2}
+.file{font-family:var(--mono);font-size:11px;border:1px solid var(--ink);padding:5px 8px;justify-self:start}
+.fig{position:absolute;left:44%;bottom:-6px;font-family:Georgia,serif;font-style:italic;font-size:14px;color:var(--muted)}
+.coords{position:absolute;right:0;bottom:6px;text-align:right}
+
+/* statement */
+.stmt{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:32px;align-items:end}
+h2{font-family:var(--body);font-weight:800;font-size:clamp(34px,4.6vw,62px);line-height:.98;letter-spacing:-.025em;text-transform:uppercase;margin:0;text-wrap:balance}
+.stmt p{margin:0;max-width:36ch}
+.track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:36px}
+.track div{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--ink);padding-bottom:8px}
+.track b{font-family:var(--display);font-weight:400;font-size:26px}
+.career{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;color:var(--muted)}
+
+/* work */
+.feat{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);background:var(--red);color:var(--ink);margin-bottom:0}
+.feat .txt{padding:22px 24px 26px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.num{font-family:var(--display);font-weight:400;font-size:28px;line-height:1}
+.ttl{font-family:var(--display);font-weight:400;font-size:clamp(56px,8vw,112px);line-height:.95;letter-spacing:.015em;text-transform:uppercase;margin:0}
+.feat .ttl{color:var(--paper)}
+.feat p{margin:0;max-width:42ch;font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;border:1px solid currentColor;padding:3px 8px}
+.visit{margin-top:auto;display:inline-flex;gap:10px;align-items:center;font-weight:700;text-decoration:none;background:var(--ink);color:var(--paper);padding:12px 16px;align-self:flex-start}
+.feat .vis{background:var(--yellow);position:relative;overflow:hidden;min-height:380px;display:grid;place-items:center;padding:28px}
+.phone{width:min(270px,80%);background:var(--ink);border-radius:26px;padding:10px;transform:rotate(5deg);box-shadow:-14px 14px 0 var(--blue)}
+.phone .scr{background:var(--paper);border-radius:18px;overflow:hidden;font-size:12.5px}
+.phone .top{background:var(--blue);color:#fff;padding:10px 12px}
+.phone .top b{display:block;font-size:14px}
+.phone .b{padding:10px;display:grid;gap:7px}
+.price{position:absolute;left:18px;bottom:16px;font-family:var(--display);font-size:44px;line-height:.9;color:var(--ink)}
+.price small{display:block;font-family:var(--mono);font-size:11px}
+
+.feat-b{background:var(--blue);grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+.feat-b .txt{color:#fff}
+.feat-b .ttl{color:var(--yellow)}
+.feat-b .visit{background:var(--yellow);color:var(--ink)}
+.feat-b .vis{background:var(--paper)}
+.flow{display:flex;align-items:center;gap:14px;width:100%;justify-content:center}
+.post{background:#fff;border:1px solid var(--ink);padding:12px;width:min(210px,44%);font-size:12.5px;transform:rotate(-3deg)}
+.post p{margin:8px 0 0;line-height:1.4}
+.ph{display:flex;align-items:center;gap:6px}
+.ph .av{width:22px;height:22px;border-radius:50%;background:var(--red)}
+.ph .mono{margin-left:auto;color:var(--muted)}
+.arrow{font-family:var(--display);font-size:44px;color:var(--red);line-height:1}
+.shop{background:#fff;border:2px solid var(--ink);width:min(190px,40%);display:grid;gap:6px;padding:0 0 12px;font-size:14px;transform:rotate(3deg);box-shadow:10px 10px 0 var(--ink)}
+.shop .sh{background:var(--ink);color:var(--paper);padding:6px 8px;font-size:9.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shop .img{aspect-ratio:4/3;max-width:100%;margin:4px 10px 0;background:repeating-radial-gradient(circle at 30% 40%,var(--yellow) 0 10px,var(--red) 10px 13px)}
+.shop b,.shop .mono{padding:0 10px}
+.shop .buy{margin:4px 10px 0;background:var(--red);color:#fff;text-align:center;padding:7px;font-weight:700;font-size:12px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{display:flex;flex-direction:column;min-height:420px;padding:18px 18px 16px;text-decoration:none;position:relative;overflow:hidden;min-width:0}
+.card .ttl{font-size:clamp(40px,4.4vw,60px)}
+.card .mono{margin-top:6px}
+.card .art{flex:1;display:grid;place-items:center;padding:16px 0}
+.card .go{font-size:22px;line-height:1;transition:transform .2s}
+.card:hover .go{transform:translateX(6px)}
+.c-paper{background:var(--paper);border-right:1px solid var(--rule)}
+.c-blue{background:var(--blue);color:#fff}
+.c-yellow{background:var(--yellow)}
+.c-ink{background:var(--ink);color:var(--paper)}
+.c-ink .num,.c-ink .ttl{color:var(--yellow)}
+.c-blue .ttl{color:#fff}
+
+.index{margin-top:36px;border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:60px minmax(0,1.2fr) minmax(0,2fr) 140px;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--rule)}
+.row b{font-family:var(--display);font-weight:400;letter-spacing:.02em;font-size:28px;text-transform:uppercase;line-height:1}
+.row p{margin:0;color:var(--muted)}
+.row .mono{text-align:right}
+
+/* band */
+.band{background:var(--ink);color:var(--paper)}
+.band .wrap{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px;align-items:center;padding-block:22px}
+.words{display:flex;align-items:center;gap:22px;flex-wrap:wrap;font-family:var(--display);font-style:italic;font-size:clamp(44px,7vw,96px);line-height:1;text-transform:uppercase}
+.words .o{color:transparent;-webkit-text-stroke:1.5px var(--paper)}
+.words .y{color:var(--yellow)}
+.words i{font-style:normal;flex:0 1 60px;height:1px;background:#4a4842}
+.writing{display:grid;gap:10px}
+.writing a{text-decoration:none;border-bottom:1px solid #4a4842;padding-bottom:6px;display:flex;justify-content:space-between}
+
+/* contact */
+.contact{display:grid;grid-template-columns:200px minmax(0,1fr) 260px;gap:32px;align-items:end}
+.portrait{aspect-ratio:3/4;max-width:100%;background:var(--ink);position:relative;overflow:hidden;filter:grayscale(1)}
+.portrait span:last-child{position:absolute;inset:auto 0 -12% 0;text-align:center;font-family:var(--display);font-size:150px;line-height:.8;color:var(--paper)}
+.portrait .mono{position:absolute;top:10px;left:10px;color:var(--paper)}
+h3{font-family:var(--body);font-weight:800;font-size:clamp(38px,5vw,70px);line-height:.95;letter-spacing:-.025em;text-transform:uppercase;margin:0 0 18px;text-wrap:balance}
+h3 .r{color:var(--red)}
+.ct{display:grid;gap:7px;border-left:1px solid var(--rule);padding-left:20px}
+.ct a{text-decoration:none}
+.ct a:hover{text-decoration:underline}
+footer{border-top:1px solid var(--ink)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-block:14px;color:var(--muted)}
+
+/* load moment */
+@media (prefers-reduced-motion:no-preference){
+  h1 .ln{display:block;animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+  h1 .ln:nth-child(2){animation-delay:.08s} h1 .ln:nth-child(3){animation-delay:.16s}
+  .chat{animation:drop .8s .35s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{transform:translateY(18px);opacity:.15}to{transform:none;opacity:1}}
+  @keyframes drop{from{transform:rotate(-12deg) translateY(-14px)}to{transform:rotate(-4deg)}}
+}
+
+@media (max-width:1000px){
+  .links{display:none}
+  nav .wrap{grid-template-columns:1fr auto auto}
+  .hero,.stmt,.feat,.feat-b{grid-template-columns:minmax(0,1fr)}
+  .feat-b .vis{order:2}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact{grid-template-columns:160px minmax(0,1fr)}
+  .contact .ct{grid-column:1/-1;border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:16px}
+  .band .wrap{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  .sec{grid-template-columns:28px minmax(0,1fr)}
+  h1{font-size:clamp(56px,17vw,96px)}
+  .ttl{font-size:clamp(48px,15vw,80px)}
+  .feat .vis{display:flex;flex-direction:column;align-items:center;gap:22px;min-height:0;padding:28px 16px}
+  .price{position:static;align-self:flex-start;font-size:36px}
+  .flow{flex-direction:column;gap:14px}
+  .post,.shop{width:min(250px,84%)}
+  .arrow{transform:rotate(90deg)}
+  .lede{font-size:17px}
+  .flow{gap:8px}
+  .shop{box-shadow:6px 6px 0 var(--ink)}
+  .arrow{font-size:30px}
+  .inner{padding-left:14px}
+  .clock{display:none}
+  .brand{border-right:0}
+  .brand .mono{display:none}
+  .collage{min-height:440px}
+  .blk-blue{height:350px;left:0;right:12%}
+  .track{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:1fr}
+  .card{min-height:340px}
+  .row{grid-template-columns:auto minmax(0,1fr);column-gap:12px;row-gap:6px;align-items:center}
+  .row>*{grid-column:1/-1}
+  .row>span:first-child{grid-column:1;grid-row:1}
+  .row b{grid-column:2;grid-row:1;font-size:26px}
+  .row .mono{text-align:left}
+  .contact{grid-template-columns:1fr}
+  .portrait{max-width:180px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><b>ADIB HARITH</b><span class="mono">Designer /<br>Builder</span></div>
+    <div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#writing">Writing</a><a href="#contact">Contact</a></div>
+    <div class="clock mono" id="clock">Kuala Lumpur / --:-- local</div>
+    <a class="cta" href="#contact">Start a project ↗</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section class="sec" aria-label="Intro">
+    <div class="rail"><span>001</span></div>
+    <div class="inner hero">
+      <div>
+        <h1><span class="ln">Designed</span><span class="ln">to</span><span class="ln r">Ship.</span></h1>
+        <p class="lede">I design visual systems and build the AI agents that run them.</p>
+        <div class="meta mono"><span>Selected work / 2026</span><span>Design · Agentic AI · Web3 · Games</span></div>
+        <a class="under" href="#work">View selected work ↘</a>
+      </div>
+      <div class="collage" aria-hidden="true">
+        <div class="blk-blue"><span class="mono">AH / 26<br>Studio 0</span><div class="mono-big">AH</div></div>
+        <div class="blk-yellow"></div>
+        <div class="chat">
+          <div class="hd mono"><span>Rakan · AI</span><span>09:41</span></div>
+          <div class="b">
+            <div class="bub me">Tolong semak beza rekonsiliasi bank bulan ni.</div>
+            <div class="bub ai">Boleh. Saya padankan transaksi dan tandakan yang perlu disemak.</div>
+            <div class="file">Laporan_rekonsiliasi.xlsx</div>
+          </div>
+        </div>
+        <span class="fig">fig. 01 ↙ live product</span>
+        <span class="coords mono">3.1390° N<br>101.6869° E</span>
+      </div>
+    </div>
+    <span class="plus" style="right:0;top:6px">+</span>
+  </section>
+
+  <section class="sec" id="about" aria-label="About">
+    <div class="rail"><span>002</span></div>
+    <div class="inner">
+      <div class="stmt">
+        <h2>From IT analyst<br>to designer<br>to builder.</h2>
+        <p>Started at Dell, then IRIS, Schlumberger and Gentari. Along the way I moved into UI/UX, motion and Web3 consulting. Now I design interfaces and build multi-agent AI systems that do real work.</p>
+      </div>
+      <div class="track">
+        <div><b>01</b><span class="mono">Design</span></div>
+        <div><b>02</b><span class="mono">Motion</span></div>
+        <div><b>03</b><span class="mono">Agentic AI</span></div>
+        <div><b>04</b><span class="mono">Web3 →</span></div>
+      </div>
+      <div class="career mono"><span>Dell</span><span>→ IRIS</span><span>→ Schlumberger</span><span>→ Gentari</span><span>→ Independent builder</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="work" aria-label="Selected work">
+    <div class="rail"><span>003</span></div>
+    <div class="inner">
+      <div class="mono" style="margin-bottom:14px">Selected work · top projects</div>
+
+      <article class="feat">
+        <div class="txt">
+          <span class="num">01</span>
+          <h4 class="ttl">Rakan AI</h4>
+          <div class="chips"><span class="chip">AI assistant</span><span class="chip">Telegram</span><span class="chip">BM / EN</span><span class="chip">2026</span></div>
+          <p>Personal AI assistants that live in Telegram, set up for accountants, tender and project teams, and teachers. Send a message, a document or a voice note and it handles bank reconciliations, PDF to Excel, reports and lesson plans.</p>
+          <a class="visit" href="https://rakanai.vercel.app/" target="_blank" rel="noopener">Visit rakanai.vercel.app ↗</a>
+        </div>
+        <div class="vis" aria-hidden="true">
+          <div class="phone"><div class="scr">
+            <div class="top"><b>Rakan · Pembantu AI</b><span class="mono">Sedia membantu</span></div>
+            <div class="b">
+              <div class="bub me">Draf RPH Sains Tahun 4, topik magnet.</div>
+              <div class="bub ai">Siap. Objektif, aktiviti dan kuiz 5 soalan.</div>
+              <div class="file">RPH_Sains_T4.docx</div>
+              <div class="bub me">🎤 Voice message · 0:12</div>
+            </div>
+          </div></div>
+          <div class="price">RM35*<small>/ month, from</small></div>
+        </div>
+      </article>
+
+      <article class="feat feat-b">
+        <div class="vis" aria-hidden="true">
+          <div class="flow">
+            <div class="post">
+              <div class="ph"><span class="av"></span><b>@kedaikak.ani</b><span class="mono">2j</span></div>
+              <p>Kuih raya batch 2 dah buka! Semperit, tart nenas, makmur. RM28 sebalang. DM atau komen "nak" 🧡</p>
+            </div>
+            <span class="arrow">→</span>
+            <div class="shop">
+              <div class="sh mono">sayajual.xyz/kedaikak</div>
+              <div class="img"></div>
+              <b>Kuih Raya Batch 2</b>
+              <span class="mono">RM28 / balang</span>
+              <span class="buy">Beli sekarang</span>
+            </div>
+          </div>
+        </div>
+        <div class="txt">
+          <span class="num">02</span>
+          <h4 class="ttl">Sayajual</h4>
+          <div class="chips"><span class="chip">Social commerce</span><span class="chip">Threads</span><span class="chip">2026</span></div>
+          <p>Turns a Threads post into a simple selling page. Small sellers already sell through their posts; Sayajual gives each one a clean page with the product, price and a buy button.</p>
+          <a class="visit" href="https://sayajual.xyz" target="_blank" rel="noopener">Visit sayajual.xyz ↗</a>
+        </div>
+      </article>
+
+      <div class="grid4">
+        <a class="card c-paper" href="#work">
+          <span class="num">03</span><span class="ttl">Hermes</span>
+          <span class="mono">Multi-agent system<br>2026</span>
+          <div class="art"><svg viewBox="0 0 160 120" width="160" height="120" aria-hidden="true"><g stroke="#111110" stroke-width="1.5"><line x1="80" y1="60" x2="22" y2="20"/><line x1="80" y1="60" x2="140" y2="22"/><line x1="80" y1="60" x2="24" y2="100"/><line x1="80" y1="60" x2="138" y2="98"/></g><circle cx="80" cy="60" r="16" fill="#f2401c"/><g fill="#111110"><circle cx="22" cy="20" r="7"/><circle cx="140" cy="22" r="7"/><circle cx="24" cy="100" r="7"/><circle cx="138" cy="98" r="7"/></g></svg></div>
+          <span class="go">→</span>
+        </a>
+        <a class="card c-blue" href="https://sfxforge.vercel.app" target="_blank" rel="noopener">
+          <span class="num">04</span><span class="ttl">SFX Forge</span>
+          <span class="mono">Game audio synth + MCP<br>2026 · live</span>
+          <div class="art"><canvas id="wave" width="200" height="100" style="width:100%;max-width:200px;height:auto" aria-hidden="true"></canvas></div>
+          <span class="go">↗</span>
+        </a>
+        <a class="card c-yellow" href="#work">
+          <span class="num">05</span><span class="ttl">Million Pixels</span>
+          <span class="mono">On-chain pixel ads<br>2026</span>
+          <div class="art"><canvas id="pix" width="160" height="120" style="width:100%;max-width:170px;height:auto;image-rendering:pixelated" aria-hidden="true"></canvas></div>
+          <span class="go">→</span>
+        </a>
+        <a class="card c-ink" href="#work">
+          <span class="num">06</span><span class="ttl">Sprite Forge</span>
+          <span class="mono">Pixel sprite editor + MCP<br>2026</span>
+          <div class="art"><canvas id="sprite" width="16" height="16" style="width:128px;height:128px;image-rendering:pixelated" aria-hidden="true"></canvas></div>
+          <span class="go">→</span>
+        </a>
+      </div>
+
+      <div class="index" role="list">
+        <div class="row" role="listitem"><span class="mono" style="text-align:left">07</span><b>DEHUMAIN</b><p>Photoreal PFP NFT collection built from a layered trait file.</p><span class="mono">Web3 / Art</span></div>
+        <div class="row" role="listitem"><span class="mono" style="text-align:left">08</span><b>x402 Gateway</b><p>Payment rails so AI agents can pay for APIs per request.</p><span class="mono">Agentic AI</span></div>
+        <div class="row" role="listitem"><span class="mono" style="text-align:left">09</span><b>Simpanthis</b><p>Save Threads posts by mentioning an account with a category tag.</p><span class="mono">Product</span></div>
+        <div class="row" role="listitem"><span class="mono" style="text-align:left">10</span><b>GoHantar</b><p>Side-scrolling delivery-rider game set in a Malaysian town.</p><span class="mono">Game · WIP</span></div>
+      </div>
+    </div>
+    <span class="plus" style="right:0;top:6px">+</span>
+  </section>
+</main>
+
+<section class="band" id="writing" aria-label="Writing">
+  <div class="wrap">
+    <div class="words"><span class="o">Design</span><i></i><span class="o">Build</span><i></i><span class="y">Automate</span></div>
+    <div class="writing mono">
+      <span style="color:#9a968c">004 · Writing on Substack</span>
+      <a href="https://adihar.substack.com" target="_blank" rel="noopener"><span>adihar</span><span>↗</span></a>
+      <a href="https://artdeep.substack.com" target="_blank" rel="noopener"><span>artdeep</span><span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="sec" id="contact" aria-label="Contact" style="border-top:0">
+    <div class="rail"><span>005</span></div>
+    <div class="inner contact">
+      <div class="portrait" aria-hidden="true"><span class="mono">fig. 02</span><span>A</span></div>
+      <div>
+        <h3>Let's build<br><span class="r">something sharp.</span></h3>
+        <a class="under" href="https://www.linkedin.com/in/adibharith" target="_blank" rel="noopener">Start a project ↗</a>
+      </div>
+      <div class="ct mono">
+        <a href="https://www.linkedin.com/in/adibharith" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/x0trad" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://adihar.substack.com" target="_blank" rel="noopener">Substack ↗</a>
+        <span style="color:var(--muted)">Kuala Lumpur / Malaysia</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer><div class="wrap mono"><span>© 2026 Adib Harith</span><span>Ideas made to ship</span></div></footer>
+
+<script>
+(function(){
+  var el=document.getElementById('clock');
+  function tick(){try{var t=new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Kuala_Lumpur',hour:'2-digit',minute:'2-digit'});el.textContent='Kuala Lumpur / '+t+' local';}catch(e){}}
+  tick();setInterval(tick,30000);
+
+  // SFX waveform
+  var w=document.getElementById('wave').getContext('2d');
+  w.fillStyle='#e9ff3b';
+  for(var i=0;i<40;i++){var h=Math.abs(Math.sin(i*.55)*Math.exp(-i*.05))*80+4;w.fillRect(i*5,50-h/2,3,h);}
+
+  // Million pixels grid
+  var p=document.getElementById('pix').getContext('2d'),cols=['#111110','#f2401c','#1f4bff','#f2efe8'];
+  var s=7;for(var y=0;y<120;y+=8)for(var x=0;x<160;x+=8){s=(s*9301+49297)%233280;var r=s/233280;
+    p.fillStyle=r<.55?'rgba(17,17,16,.08)':cols[Math.floor(r*13)%4];p.fillRect(x,y,7,7);}
+  p.fillStyle='#111110';p.fillRect(48,40,32,24);p.fillStyle='#f2401c';p.fillRect(104,72,24,16);
+
+  // Sprite
+  var c=document.getElementById('sprite').getContext('2d');
+  var art=["......kkkk......","....kkyyyyk.....","...kyyyyyyyk....","...kyykyykyk....","...kyyyyyyyk....","....kyyrryk.....",".....kkkkk......","....kbbbbbbk....","...kbbkbbkbbk...","..kyybbbbbbyyk..","..kyykbbbbkyyk..","....kbbbbbbk....","....kbbkkbbk....","....kkk..kkk....","...kyyk..kyyk...","...kkkk..kkkk..."];
+  var map={k:'#f2efe8',y:'#e9ff3b',r:'#f2401c',b:'#1f4bff'};
+  art.forEach(function(row,y){row.split('').forEach(function(ch,x){if(map[ch]){c.fillStyle=map[ch];c.fillRect(x,y,1,1);}});});
+})();
+</script>
+
+</body>
+</html>
